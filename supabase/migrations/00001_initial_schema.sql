@@ -18,21 +18,6 @@ begin
 end;
 $$;
 
--- True when the current user is a committee admin. SECURITY DEFINER so RLS
--- policies can call it without recursing into the profiles policy.
-create or replace function public.is_admin()
-returns boolean
-language sql
-security definer
-set search_path = public
-stable
-as $$
-  select coalesce(
-    (select is_admin from public.profiles where id = auth.uid()),
-    false
-  );
-$$;
-
 -- ---------------------------------------------------------------------------
 -- Tables
 -- ---------------------------------------------------------------------------
@@ -71,6 +56,23 @@ $$;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute function public.handle_new_user();
+
+-- True when the current user is a committee admin. SECURITY DEFINER so RLS
+-- policies can call it without recursing into the profiles policy. Defined
+-- after the profiles table because SQL function bodies are validated at
+-- creation time.
+create or replace function public.is_admin()
+returns boolean
+language sql
+security definer
+set search_path = public
+stable
+as $$
+  select coalesce(
+    (select is_admin from public.profiles where id = auth.uid()),
+    false
+  );
+$$;
 
 create table public.committee (
   id uuid primary key default gen_random_uuid(),
