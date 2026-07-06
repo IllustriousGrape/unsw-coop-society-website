@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
+import { Logo } from "@/components/ui/Logo";
 import { MobileMenu } from "@/components/navigation/MobileMenu";
 
 /** Sticky site header with desktop links and a mobile drawer menu. */
@@ -19,12 +20,7 @@ export function Header() {
           href="/"
           className="text-charcoal flex items-center gap-2 text-base font-bold tracking-tight"
         >
-          <span
-            aria-hidden="true"
-            className="bg-primary text-charcoal flex h-8 w-8 items-center justify-center rounded-lg text-sm font-extrabold"
-          >
-            C
-          </span>
+          <Logo className="text-charcoal h-8 w-8" />
           {SITE_NAME}
         </Link>
 

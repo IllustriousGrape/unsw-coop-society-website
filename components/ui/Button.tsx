@@ -4,10 +4,12 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 type ButtonVariant = "primary" | "secondary" | "ghost";
 
 const VARIANT_CLASSES: Record<ButtonVariant, string> = {
+  // Solid ink — the default action on light backgrounds.
   primary:
-    "bg-primary text-charcoal hover:bg-primary-hover shadow-sm hover:shadow",
-  secondary:
     "bg-charcoal text-white hover:bg-charcoal-light shadow-sm hover:shadow",
+  // Solid white — the default action on dark backgrounds.
+  secondary:
+    "bg-white text-charcoal hover:bg-neutral-200 shadow-sm hover:shadow",
   ghost:
     "bg-transparent text-charcoal border border-border hover:border-charcoal",
 };

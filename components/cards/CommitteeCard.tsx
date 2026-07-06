@@ -20,7 +20,7 @@ export function CommitteeCard({ member }: CommitteeCardProps) {
         ) : (
           <div
             aria-hidden="true"
-            className="bg-charcoal text-primary flex h-full items-center justify-center text-5xl font-extrabold"
+            className="bg-charcoal flex h-full items-center justify-center text-5xl font-extrabold text-white"
           >
             {member.name.charAt(0)}
           </div>

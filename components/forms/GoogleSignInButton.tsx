@@ -33,7 +33,7 @@ export function GoogleSignInButton() {
   return (
     <div>
       <Button
-        variant="secondary"
+        variant="primary"
         onClick={signIn}
         disabled={isLoading}
         className="w-full"

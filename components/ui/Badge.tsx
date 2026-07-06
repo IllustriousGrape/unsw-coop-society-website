@@ -9,7 +9,7 @@ interface BadgeProps {
 export function Badge({ children, tone = "neutral" }: BadgeProps) {
   const toneClasses =
     tone === "primary"
-      ? "bg-primary text-charcoal"
+      ? "bg-charcoal text-white"
       : "bg-surface-muted text-text-muted";
   return (
     <span

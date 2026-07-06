@@ -101,7 +101,7 @@ export default async function SponsorPage({ params }: SponsorPageProps) {
                     <ButtonLink
                       href={sponsor.website_url}
                       external
-                      variant="secondary"
+                      variant="primary"
                       className="w-full"
                     >
                       Visit website

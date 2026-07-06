@@ -172,7 +172,7 @@ export default function AboutPage() {
                 <div className="border-border bg-surface h-full rounded-2xl border p-6">
                   <div
                     aria-hidden="true"
-                    className="bg-primary mb-4 h-1.5 w-10 rounded-full"
+                    className="bg-charcoal mb-4 h-1.5 w-10 rounded-full"
                   />
                   <h3 className="text-charcoal text-lg font-bold">
                     {value.title}

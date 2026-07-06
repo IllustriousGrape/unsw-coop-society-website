@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/ui/Logo";
 import {
   ACKNOWLEDGEMENT_OF_COUNTRY,
   CONTACT_EMAIL,
@@ -17,12 +18,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-3">
           <div>
             <p className="flex items-center gap-2 text-base font-bold">
-              <span
-                aria-hidden="true"
-                className="bg-primary text-charcoal flex h-8 w-8 items-center justify-center rounded-lg text-sm font-extrabold"
-              >
-                C
-              </span>
+              <Logo className="h-8 w-8 text-white" />
               {SITE_NAME}
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
@@ -39,7 +35,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="hover:text-primary text-sm text-white/80"
+                    className="text-sm text-white/80 hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -58,7 +54,7 @@ export function Footer() {
                   href={SOCIAL_LINKS.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary text-sm text-white/80"
+                  className="text-sm text-white/80 hover:text-white"
                 >
                   Instagram
                 </a>
@@ -68,7 +64,7 @@ export function Footer() {
                   href={SOCIAL_LINKS.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary text-sm text-white/80"
+                  className="text-sm text-white/80 hover:text-white"
                 >
                   LinkedIn
                 </a>
@@ -76,7 +72,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="hover:text-primary text-sm text-white/80"
+                  className="text-sm text-white/80 hover:text-white"
                 >
                   {CONTACT_EMAIL}
                 </a>

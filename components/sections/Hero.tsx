@@ -14,7 +14,7 @@ export function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover opacity-40"
+        className="object-cover opacity-40 grayscale"
       />
       <div
         aria-hidden="true"
@@ -22,7 +22,7 @@ export function Hero() {
       />
       <Container className="relative py-28 sm:py-36 lg:py-44">
         <div className="max-w-3xl">
-          <p className="bg-primary text-charcoal mb-4 inline-flex items-center rounded-full px-4 py-1.5 text-sm font-semibold">
+          <p className="text-charcoal mb-4 inline-flex items-center rounded-full bg-white px-4 py-1.5 text-sm font-semibold">
             UNSW Co-op Society
           </p>
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -34,7 +34,9 @@ export function Hero() {
             connections, and a community that lasts well beyond graduation.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <ButtonLink href="/events">Upcoming Events</ButtonLink>
+            <ButtonLink href="/events" variant="secondary">
+              Upcoming Events
+            </ButtonLink>
             <ButtonLink
               href="/committee"
               variant="ghost"

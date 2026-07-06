@@ -20,7 +20,7 @@ export function ContactForm() {
       >
         <p
           aria-hidden="true"
-          className="bg-primary mx-auto flex h-12 w-12 items-center justify-center rounded-full text-xl"
+          className="bg-charcoal mx-auto flex h-12 w-12 items-center justify-center rounded-full text-xl text-white"
         >
           ✓
         </p>

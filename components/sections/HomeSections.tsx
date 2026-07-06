@@ -128,7 +128,11 @@ export function InstagramSection() {
             @unswcoopsoc is where it all happens first.
           </p>
           <div className="mt-8">
-            <ButtonLink href={SOCIAL_LINKS.instagram} external>
+            <ButtonLink
+              href={SOCIAL_LINKS.instagram}
+              external
+              variant="secondary"
+            >
               @unswcoopsoc on Instagram
             </ButtonLink>
           </div>
@@ -216,7 +220,7 @@ export function CommitteePreviewSection({
                 ) : (
                   <div
                     aria-hidden="true"
-                    className="bg-charcoal text-primary flex h-full items-center justify-center text-4xl font-extrabold"
+                    className="bg-charcoal flex h-full items-center justify-center text-4xl font-extrabold text-white"
                   >
                     {member.name.charAt(0)}
                   </div>

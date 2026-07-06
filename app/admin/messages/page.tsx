@@ -29,7 +29,7 @@ export default async function AdminMessagesPage() {
               className={`rounded-2xl border p-6 ${
                 message.is_read
                   ? "border-border bg-surface"
-                  : "border-primary bg-surface"
+                  : "border-charcoal bg-surface"
               }`}
             >
               <div className="flex flex-wrap items-start justify-between gap-4">

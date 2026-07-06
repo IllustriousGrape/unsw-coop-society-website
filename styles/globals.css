@@ -1,13 +1,11 @@
 @import "tailwindcss";
 
 /*
- * Theme tokens. UNSW yellow is the primary brand colour; charcoal and
- * neutral greys carry the rest of the interface. Spacing follows an
- * 8px system via Tailwind's default scale.
+ * Theme tokens. The brand is monochrome, matching the society's
+ * black-and-white logo: ink (charcoal) on white with neutral greys.
+ * Spacing follows an 8px system via Tailwind's default scale.
  */
 @theme {
-  --color-primary: #ffdc00;
-  --color-primary-hover: #f0cf00;
   --color-charcoal: #17171c;
   --color-charcoal-light: #2b2b33;
   --color-surface: #ffffff;
@@ -36,8 +34,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-primary);
-  color: var(--color-charcoal);
+  background-color: var(--color-charcoal);
+  color: var(--color-surface);
 }
 
 @media (prefers-reduced-motion: reduce) {
