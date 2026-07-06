@@ -21,8 +21,8 @@ export function Logo({ className = "h-8 w-8" }: LogoProps) {
       <circle cx="68" cy="32" r="17" />
       {/* Bottom-left: circle */}
       <circle cx="32" cy="68" r="17" />
-      {/* Bottom-right: circle with a squared corner */}
-      <path d="M 68 51 A 17 17 0 0 0 51 68 A 17 17 0 0 0 68 85 L 85 85 L 85 68 A 17 17 0 0 0 68 51 Z" />
+      {/* Bottom-right: circle with a squared bottom-left corner */}
+      <path d="M 68 51 A 17 17 0 0 1 85 68 A 17 17 0 0 1 68 85 L 51 85 L 51 68 A 17 17 0 0 1 68 51 Z" />
     </svg>
   );
 }
